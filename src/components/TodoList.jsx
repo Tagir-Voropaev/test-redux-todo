@@ -1,20 +1,26 @@
 import React from 'react'
-import TodoItem from './TodoItem'
+import { useSelector } from 'react-redux'
+
+const TodoList = () => {
+    const tasks = useSelector((state) => state.todos.taskList)
 
 
-
-const TodoList = ({ todos, toggleTodoComplete, removeTodo }) => {
+    const conl = () => {
+        return(console.log(tasks))
+    }
     return (
-        <ul className='task-list'>
-            {
-                todos.map(todo => (<TodoItem key={todo.id}
-                    toggleTodoComplete={toggleTodoComplete}
-                    removeTodo={removeTodo}
-                    {...todo} />
-                ))
-            }
-        </ul>
+        <div className="task-list">
+            {tasks.map((task) => (
+                <li key={task.id} className='task-elem'>
+                    <p className='task-id task-text'>{task.id}</p>
+                    <p className='task-title task-text'>{task.title}</p>
+                    <p className='task-time task-text'>{task.time}</p>
+                </li>
+            ))}
+            <button onClick={conl}>1232134213</button>
+        </div>
     )
 }
 
-export default TodoList
+
+export default TodoList;

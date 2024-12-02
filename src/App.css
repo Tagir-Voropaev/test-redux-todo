@@ -6,57 +6,69 @@
     padding: 0;
 }
 
-.form-box{
+.App{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
+    flex-direction: column;
 }
-.add-task{
+.todo{
+    margin-top: 30px;
+}
+.inputs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.task-input{
     height: 30px;
-    width: 250px;
-    border-radius: 5px;
+    border-radius: 10px;
+    outline: none;
     border: 1px solid #000;
-    outline: none;
-}
-.submit-task{
-    
-    color: #fff;
-    height: 30px;
-    width: 100px;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-    background-color: #73c87a;
-}
-.form-item{
+    background-color: #fff;
     margin: 0 10px;
+}
+.button{
+    width: 80px;
+    border-radius: 10px;
+    margin: 0 10px;
+    height: 30px;
+    outline: none;
+    background-color: #4ccb4c;
+    color: #fff;
+    border: none;
+    padding: 0 10px;
+}
+.button:hover{
+    background-color: #49bc49;
+    color: #eeeeee;
+}
+.button:active{
+    background-color: #42ab42;
+    color: #d5d5d5;
 }
 .task-list{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 20px;
+}
+.task-elem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     list-style: none;
 }
-.task-container{
-    margin: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 300px;
-}
-.checkbox{
-    width: 20px;
-    height: 20px;
-}
 .task-text{
-    font-size: 18px;
+    margin: 0 10px;
 }
-.delete{
-    width: 20px;
-    height: 20px;
-    color: #d16464;
-    cursor: pointer;
+.counter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #000;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 50px;
 }
